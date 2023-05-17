@@ -1,8 +1,8 @@
 let slot_screen = document.getElementById("slot-screen");
 let reel = document.getElementsByClassName("reel");
 let reels = document.getElementsByClassName("reels");
-let stop_btn = document.getElementsByClassName("stp-btn");
-let start_btn = document.getElementById("start-brn");
+let stop_btn = document.getElementsByClassName("stop-btn");
+let start_btn = document.getElementById("start-btn");
 
 
 let sec = 100; // slot reel rotation speed
@@ -28,7 +28,7 @@ let slot = {
             slot.animation(index);
         }
     },
-    
+
     //stop button click event
     stop:function(){
         stopReelFlag[i] = true;
@@ -70,6 +70,7 @@ let slot = {
             }
         })
     },
+
 }
 
 
