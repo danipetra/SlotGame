@@ -51,6 +51,7 @@ let slot = {
 
     },
 
+    //move the slot
     animation:function(index){
         if(reelCounts[index] >= 0){
             reelCounts[index] = 0;
@@ -61,17 +62,16 @@ let slot = {
         {
             duration:sec, 
             easing:"linear",
-            complet:function(){
+            complete:function(){
                 if(stopReelFlag[index]){
                     return;
                 }
                 reelCounts[index]++;
                 slot.animation(index);
             }
-        })
+        });
     },
-
-}
+};
 
 
 //!
@@ -88,7 +88,7 @@ window.onload = function(){
 
     for(let i = 0; i<stop_btn.length; i++){
         stop_btn[i].addEventListener("click", function(e){
-            slot.stop(e.target.getAttributr("data-val"));
+            slot.stop(e.target.getAttribute("data-val"));
         })
     }
-}
+};
