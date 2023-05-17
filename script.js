@@ -28,6 +28,7 @@ let slot = {
             slot.animation(index);
         }
     },
+    
     //stop button click event
     stop:function(){
         stopReelFlag[i] = true;
