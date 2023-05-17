@@ -9,7 +9,7 @@ body{
     --outer-shadow:
     0 0 0.1vw 0.4vw #fffb00,
     0 0 0.4vw 0.6vw #000,
-    0 0 0.1vw 0.4 vw #001234
+    0 0 0.1vw 0.4vw #001234
 }
 
 .slot{
@@ -21,4 +21,42 @@ body{
     background-color: aliceblue;
     border-radius: 8px;
     box-shadow: var(--outer-shadow);
+}
+
+#slot-screen{
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 90%;
+    margin: 1px 0;
+    background-color: #ffd400;
+}
+
+.reels{
+    width: 31%;
+    position: absolute;
+    padding: 0px;
+}
+
+.reels:nth-child(1){
+
+}
+
+
+.reels:nth-child(2){
+    
+}
+
+
+.reels:nth-child(3){
+    
 }
