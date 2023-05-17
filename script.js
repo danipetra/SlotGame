@@ -69,24 +69,24 @@ let slot = {
             }
         })
     },
+}
 
-    //!
-    window.onload = function(){
-        slot.init();
-        slot.resetLocationInfo();
-        start_btn.addEventListener("click", function(e){
-            e.target.setAttribute("disabled", true)
-            slot.start();
-            for(let i = 0; i<stop_btn.length; i++){
-                stop_btn[i].removeAttribute("disabled");
-            }
-        });
 
+//!
+window.onload = function(){
+    slot.init();
+    slot.resetLocationInfo();
+    start_btn.addEventListener("click", function(e){
+        e.target.setAttribute("disabled", true)
+        slot.start();
         for(let i = 0; i<stop_btn.length; i++){
-            stop_btn[i].addEventListener("click", function(e){
-                slot.stop(e.target.getAttributr("data-val"));
-            });
+            stop_btn[i].removeAttribute("disabled");
         }
-    }
+    });
 
+    for(let i = 0; i<stop_btn.length; i++){
+        stop_btn[i].addEventListener("click", function(e){
+            slot.stop(e.target.getAttributr("data-val"));
+        })
+    }
 }
