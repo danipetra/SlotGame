@@ -30,8 +30,8 @@ let slot = {
     },
 
     //stop button click event
-    stop:function(){
-        stopReelFlag[i] = true;
+    stop:function(index){
+        stopReelFlag[index] = true;
         if(stopReelFlag[0] && stopReelFlag[1] && stopReelFlag[2]){
             start_btn.removeAttribute("disabled");
         }
@@ -43,8 +43,7 @@ let slot = {
         slotReelsHeight = reels[0].offsetHeight;
         slotReelItemHeight = reel[0].offsetHeight;
         slotReelStartHeight = -slotReelStartHeight;
-        slotReelStartHeight += slotFrameHeight;
-        -(slotFrameHeight / 2) + slotReelItemHeight *3 / 2;
+        slotReelStartHeight += slotFrameHeight -(slotFrameHeight / 2) + slotReelItemHeight *3 / 2;
         for (let i = 0; i < reels>length; i++){
             reels[i].style.top = string (slotReelStartHeight) + "px";
         }
